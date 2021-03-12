@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="opacity">
+        <div class="container">
+            <div id="formulario1">
+                <form action="index.php" method="post">
+                    <h2 style="text-align: center;">
+                        Login clientes
+                    </h2>
+                    <div class="input">
+                    <input required name="email" id="email" type="email" autocomplete="off"/>
+                    <label for="email">Email</label>
+                    <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <input required type="password" name="senha" id="senha" minlength="6" maxlength="10" id="senha" autocomplete="off"/>
+                        <label for="senha">Senha</label>
+                        <span class="error"></span>
+                    </div>
+                    <button type="submit">Sign in</button>
+                    <div class="social-icons">
+                        <div class="social_icon">
+                            <p> Não tem conta?<a href="cadastro.php">Clique aqui</a></p>
+                            <p style="margin-top:2vh; margin-bottom:1vh;">Gostaria de ir para o login de empresas?</p>
+                            <a onclick="abrir_form2()">Clique Aqui</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="formulario2">
+                <form action="index.php" method="post">
+                    <h2 style="text-align: center;">
+                        Login Empresa
+                    </h2>
+                    <div class="input">
+                        <input required name="cnpj" id="cnpj" type="text" autocomplete="off"/>
+                        <label for="text">CNPJ</label>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <input required type="password" name="senha" id="senha" minlength="6" maxlength="10" id="senha" autocomplete="off"/>
+                        <label for="senha">Senha</label>
+                        <span class="error"></span>
+                    </div>
+                    <button type="submit">Sign in</button>
+                    <div class="social-icons">
+                        <div class="social_icon">
+                            <p> Não tem conta?<a href="cadastro.php">Clique aqui</a></p>
+                            <p style="margin-top:2vh; margin-bottom:1vh;">Gostaria de ir para o login de clientes?</p>
+                            <a onclick="abrir_form1()">Clique Aqui</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
