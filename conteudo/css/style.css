@@ -49,7 +49,7 @@ form {
 
     margin: auto auto;
     padding: 32px 64px;
-
+    outline: 0;
     display: flex;
     flex-direction: column;
 }
