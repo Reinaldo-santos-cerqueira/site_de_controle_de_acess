@@ -14,8 +14,13 @@
             <div id="formulario1">
                 <form action="index.php" method="post">
                     <h2 style="text-align: center;">
-                        Login clientes
+                        Cadastro clientes
                     </h2>
+                    <div class="input">
+                        <input required type="text" minlength="5" name="nome" id="nome"  id="nome"/>
+                        <label for="nome">Nome</label>
+                        <span class="error"></span>
+                    </div>
                     <div class="input">
                     <input required name="email" id="email" type="email" autocomplete="off"/>
                     <label for="email">Email</label>
@@ -26,11 +31,12 @@
                         <label for="senha">Senha</label>
                         <span class="error"></span>
                     </div>
-                    <button type="submit">Sign in</button>
+
+                    <button type="submit">Sign up</button>
                     <div class="social-icons">
                         <div class="social_icon">
-                            <p> Não tem conta?<a href="cadastro.html">Clique aqui</a></p>
-                            <p style="margin-top:2vh; margin-bottom:1vh;">Gostaria de ir para o login de empresas?</p>
+                            <p> Já possui conta?<a href="index.html">Clique aqui</a></p>
+                            <p style="margin-top:2vh; margin-bottom:1vh;">Gostaria de ir para o cadastro de empresas?</p>
                             <a onclick="abrir_form2()">Clique Aqui</a>
                         </div>
                     </div>
@@ -39,11 +45,16 @@
             <div id="formulario2">
                 <form action="index.php" method="post">
                     <h2 style="text-align: center;">
-                        Login Empresa
+                        Cadastro  Empresa
                     </h2>
                     <div class="input">
                         <input required name="cnpj" id="cnpj" type="text" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                         <label for="text">CNPJ</label>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <input required type="email" name="email" id="email"  id="email" autocomplete="on"/>
+                        <label for="email">Email</label>
                         <span class="error"></span>
                     </div>
                     <div class="input">
@@ -54,8 +65,8 @@
                     <button type="submit">Sign in</button>
                     <div class="social-icons">
                         <div class="social_icon">
-                            <p> Não tem conta?<a href="cadastro.html">Clique aqui</a></p>
-                            <p style="margin-top:2vh; margin-bottom:1vh;">Gostaria de ir para o login de clientes?</p>
+                            <p> Já possui conta?<a href="index.html">Clique aqui</a></p>
+                            <p style="margin-top:2vh; margin-bottom:1vh;">Gostaria de ir para o cadastro de clientes?</p>
                             <a onclick="abrir_form1()">Clique Aqui</a>
                         </div>
                     </div>

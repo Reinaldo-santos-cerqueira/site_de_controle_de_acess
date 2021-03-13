@@ -37,10 +37,17 @@ body {
 #formulario1{
     display: block;
     margin-top: 20vh;
+}#formulario{
+    margin-top: 20vh;
 }
 #formulario2{
     margin-top: 20vh;
     display: none;
+}
+@media (max-width: 700px){
+    #formulario,#formulario2,#formulario1{
+        margin:2vh 5vh;
+    }
 }
 form {
     background: rgba(0,0,0,0.9);
@@ -64,7 +71,7 @@ div.input {
 }
 
 input,
-button {
+button,textarea {
     /* reset appeareance */
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -97,6 +104,14 @@ button:hover{
     background-color: rgb(49, 121, 253) ;
 }
 input ~ label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    transform: translateY(-24px);
+    color: rgba(255, 255, 255, 0.6) ;
+
+}
+textarea ~ label {
     position: absolute;
     top: 16px;
     left: 0;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="opacity">
+        <div class="container">
+            <div id="formulario">
+                <form action="index.php" method="post">
+                    <h2 style="text-align: center;">
+                        Marcação de data
+                    </h2>
+                    <div class="input">
+                        <input required type="text" minlength="5" name="nome" id="nome"  id="nome"/>
+                        <label for="nome">Nome</label>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <input required name="number" id="number" minlength="9" type="text" autocomplete="off"onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                        <label for="number">Celular</label>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <input required name="data" id="data" type="date"/>
+                        <label for="data">Data</label>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <textarea required name="motivo" id="motivo"></textarea>
+                        <label for="motivo">Motivo da sua ida</label>
+                        <span class="error"></span>
+                    </div>
+                    <button type="submit">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
