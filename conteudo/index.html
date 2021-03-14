@@ -12,19 +12,17 @@
     <div id="opacity">
         <div class="container">
             <div id="formulario1">
-                <form action="index.php" method="post">
+                <form action="" class="form_cadastro_cliente" method="post">
                     <h2 style="text-align: center;">
                         Login clientes
                     </h2>
                     <div class="input">
-                    <input required name="email" id="email" type="email" autocomplete="off"/>
-                    <label for="email">Email</label>
-                    <span class="error"></span>
+                        <input  name="email" id="email" type="text" data-rules="required|email"  autocomplete="off"/>
+                        <label for="email">Email</label>
                     </div>
                     <div class="input">
-                        <input required type="password" name="senha" id="senha" minlength="6" maxlength="10" id="senha" autocomplete="off"/>
+                        <input  type="password" name="senha" id="senha" data-rules="required|min=6|max=15" id="senha" autocomplete="off"/>
                         <label for="senha">Senha</label>
-                        <span class="error"></span>
                     </div>
                     <button type="submit">Sign in</button>
                     <div class="social-icons">
@@ -37,19 +35,17 @@
                 </form>
             </div>
             <div id="formulario2">
-                <form action="index.php" method="post">
+                <form action="index.php" class="cadastro_empresa" method="post">
                     <h2 style="text-align: center;">
                         Login Empresa
                     </h2>
                     <div class="input">
-                        <input required name="cnpj" id="cnpj" type="text" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                        <input  data-rules="required|min=14|max=14" name="cnpj" id="cnpj" type="text" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                         <label for="text">CNPJ</label>
-                        <span class="error"></span>
                     </div>
                     <div class="input">
-                        <input required type="password" name="senha" id="senha" minlength="6" maxlength="10" id="senha" autocomplete="off"/>
+                        <input type="password" name="senha"data-rules="required|min=6|max=15" id="senha"id="senha" autocomplete="off"/>
                         <label for="senha">Senha</label>
-                        <span class="error"></span>
                     </div>
                     <button type="submit">Sign in</button>
                     <div class="social-icons">

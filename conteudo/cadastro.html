@@ -12,24 +12,21 @@
     <div id="opacity">
         <div class="container">
             <div id="formulario1">
-                <form action="index.php" method="post">
+                <form class="form_cadastro_cliente" action="" method="post">
                     <h2 style="text-align: center;">
                         Cadastro clientes
                     </h2>
                     <div class="input">
-                        <input required type="text" minlength="5" name="nome" id="nome"  id="nome"/>
-                        <label for="nome">Nome</label>
-                        <span class="error"></span>
+                        <input type="text"name="nome" data-rules="required|min=10|" id="nome"/>
+                        <label for="nome">Nome Completo</label>
                     </div>
                     <div class="input">
-                    <input required name="email" id="email" type="email" autocomplete="off"/>
-                    <label for="email">Email</label>
-                    <span class="error"></span>
+                        <input name="email" id="email" type="text" data-rules="required|email" autocomplete="off"/>
+                        <label for="email">Email</label>
                     </div>
                     <div class="input">
-                        <input required type="password" name="senha" id="senha" minlength="6" maxlength="10" id="senha" autocomplete="off"/>
+                        <input type="password" name="senha" id="senha" data-rules="required|min=6|max=15" id="senha" autocomplete="off"/>
                         <label for="senha">Senha</label>
-                        <span class="error"></span>
                     </div>
 
                     <button type="submit">Sign up</button>
@@ -43,24 +40,70 @@
                 </form>
             </div>
             <div id="formulario2">
-                <form action="index.php" method="post">
+                <form class="cadastro_empresa" method="post">
                     <h2 style="text-align: center;">
                         Cadastro  Empresa
                     </h2>
                     <div class="input">
-                        <input required name="cnpj" id="cnpj" type="text" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                        <input name="cnpj" id="cnpj" type="text" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57" data-rules="required|min=14|max=14"/>
                         <label for="text">CNPJ</label>
-                        <span class="error"></span>
                     </div>
                     <div class="input">
-                        <input required type="email" name="email" id="email"  id="email" autocomplete="on"/>
+                        <input type="text" name="email" id="email"  id="email" data-rules="required|email" autocomplete="on"/>
                         <label for="email">Email</label>
-                        <span class="error"></span>
                     </div>
                     <div class="input">
-                        <input required type="password" name="senha" id="senha" minlength="6" maxlength="10" id="senha" autocomplete="off"/>
+                        <input type="password" name="senha" id="senha" id="senha" data-rules="required|min=6|max=15" autocomplete="off"/>
                         <label for="senha">Senha</label>
-                        <span class="error"></span>
+                    </div>
+                    <div class="input">
+                        <input name="cep" id="cep" type="text" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57" data-rules="required|"/>
+                        <label for="cep">CEP</label>
+                    </div>
+                    <div class="input">
+                        <input type="text"name="bairro" data-rules="required|" id="bairro"/>
+                        <label for="bairro">Bairro</label>
+                    </div>
+                    <div class="input">
+                        <input type="text"name="rua" data-rules="required|" id="rua"/>
+                        <label for="rua">Rua</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="numero" id="numero" id="numero" data-rules="required|" onkeypress="return event.charCode >= 48 && event.charCode <= 57" autocomplete="off"/>
+                        <label for="numero">Numero</label>
+                    </div>
+
+                     <div class="input">
+                         <select name="estados" id="estados" data-rules="required">
+                            <option value="Acre">Acre</option>
+                            <option value="Alagoas">Alagoas</option>
+                            <option value="Amapá">Amapá</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Bahia">Bahia</option>
+                            <option value="Ceará">Ceará</option>
+                            <option value="Distrito Federal">Distrito Federal</option>
+                            <option value="Espírito Santo">Espírito Santo</option>
+                            <option value="Goiás">Goiás</option>
+                            <option value="Maranhão">Maranhão</option>
+                            <option value="Mato Grosso">Mato Grosso</option>
+                            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                            <option value="Minas Gerais">Minas Gerais</option>
+                            <option value="Pará">Pará</option>
+                            <option value="Paraíba">Paraíba</option>
+                            <option value="Paraná">Paraná</option>
+                            <option value="Pernambuco">Pernambuco</option>
+                            <option value="Piauí">Piauí</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                            <option value="Rondônia">Rondônia</option>
+                            <option value="Roraima">Roraima</option>
+                            <option value="Santa Catarina">Santa Catarina</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Sergipe">Sergipe</option>
+                            <option value="Tocantins">Tocantins</option>
+                         </select>
+                        <label for="endereco">Estados</label>
                     </div>
                     <button type="submit">Sign in</button>
                     <div class="social-icons">

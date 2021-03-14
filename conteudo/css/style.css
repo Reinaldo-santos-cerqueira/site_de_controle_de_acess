@@ -13,26 +13,24 @@
 
 html {
     font-family: "Roboto", sans-serif;
-    height: 100%;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
+
+}
+#opacity{
 
     background-image: url('../images/tianjin-2185510_1920.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+    height: 100vh;
     color: #f0f0f5;
-}
-#opacity{
-    height:100%;
-    width:100%;
-    background-color: #01010199;
+    background-attachment: fixed;
 }
 #formulario1{
     display: block;
@@ -45,15 +43,30 @@ body {
     display: none;
 }
 @media (max-width: 700px){
+
     #formulario,#formulario2,#formulario1{
-        margin:2vh 5vh;
+        margin:20vh 5vh 0 5vh;
+    }
+
+}
+@media (max-width: 4000px){
+    #formulario,#formulario2,#formulario1{
+        margin:5vh 0;
+    }
+    #opacity{
+        min-height: 100vh;
+        background-image: url('../images/tianjin-2185510_1920.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        color: #f0f0f5;
     }
 }
 form {
     background: rgba(0,0,0,0.9);
     width: 100%;
-    max-width: 500px;
-
+    max-width: 600px;
     margin: auto auto;
     padding: 32px 64px;
     outline: 0;
@@ -71,7 +84,7 @@ div.input {
 }
 
 input,
-button,textarea {
+button,textarea,select {
     /* reset appeareance */
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -94,6 +107,9 @@ button,textarea {
     font-size: 1em;
 
 }
+option{
+    color:#010101;
+}
 
 button {
     margin-top: 16px;
@@ -110,6 +126,13 @@ input ~ label {
     transform: translateY(-24px);
     color: rgba(255, 255, 255, 0.6) ;
 
+}select ~ label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transform: translateY(-24px);
+    color: rgba(255, 255, 255, 0.6) ;
+
 }
 textarea ~ label {
     position: absolute;
@@ -119,16 +142,7 @@ textarea ~ label {
     color: rgba(255, 255, 255, 0.6) ;
 
 }
-
-.input span.error {
-    display: flex;
-    
-    padding: 0;
-
-    background-color: rgba(255, 0, 0, 0.2);
-}
-
-.input span.error.active {
+.error {
     border: 1px solid rgba(255, 0, 0, 0.5);
     padding: 0.4em;
 }
